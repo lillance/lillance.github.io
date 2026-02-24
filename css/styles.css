@@ -35,6 +35,13 @@ nav {
   padding: 1rem 1.5rem;
 }
 
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.4rem;
+}
+
 nav a:hover {
   text-decoration: underline;
 }
