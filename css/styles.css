@@ -153,3 +153,17 @@ footer {
   align-items: left;
   justify-content: left;
 }
+
+.abtme {
+  position: relative;
+  height: 50vh;
+  background-image: url("../photos/IMG_8094\ 3.png");
+  background-color: #131517;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
