@@ -138,3 +138,16 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.padTech {
+  position: relative;
+  width: 50vh;
+  background-image: url("../photos/DSC00581.JPG");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
