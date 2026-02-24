@@ -24,8 +24,8 @@ main {
 }
 
 header {
-  background-color: #020617;
-  border-bottom: 1px solid #1e293b;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav {
