@@ -138,6 +138,7 @@ footer {
   display: flex;
   align-items: right;
   justify-content: right;
+  margin-right: auto;
 }
 
 .padTech {
