@@ -97,7 +97,16 @@ footer {
   border-top: 1px solid #1e293b;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
 .hero {
+  position: relative;
   height: 60vh; /* takes up part of the screen */
   background-image: url("../photos/DSC00581.jpg");
   background-size: cover;
