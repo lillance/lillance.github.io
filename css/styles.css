@@ -134,6 +134,7 @@ footer {
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
+  margin: 0 2rem;
 
   display: flex;
   align-items: right;
@@ -149,6 +150,7 @@ footer {
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
+  margin: 0 2rem;
 
   display: flex;
   align-items: left;
