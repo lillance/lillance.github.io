@@ -128,7 +128,8 @@ footer {
 
 .DAQPic {
   position: relative;
-  height: 40vh;
+  width: 50%;
+  height: auto;
   background-image: url("../photos/DAQPic.png");
   background-color: #131517;
   background-size: contain;
@@ -144,7 +145,8 @@ footer {
 
 .padTech {
   position: relative;
-  height: 60vh;
+  width: 50%;
+  height: auto;
   background-image: url("../photos/DSC00581.JPG");
   background-color: #131517;
   background-size: contain;
