@@ -125,3 +125,15 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.leftPic {
+  position: relative;
+  background-image: url("../photos/DSC00581.JPG");
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
