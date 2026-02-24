@@ -115,6 +115,7 @@ footer {
 
 .hero {
   position: relative;
+  height: 60vh;
   background-image: url("../photos/DSC00581.JPG");
   background-size: contain;
   background-position: left;
