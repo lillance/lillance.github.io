@@ -130,6 +130,7 @@ footer {
   position: relative;
   height: 60vh;
   background-image: url("../photos/DAQPic.png");
+  background-color: #131517;
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
@@ -143,6 +144,7 @@ footer {
   position: relative;
   width: 50vh;
   background-image: url("../photos/DSC00581.JPG");
+  background-color: #131517;
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
