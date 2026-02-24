@@ -126,9 +126,9 @@ footer {
   justify-content: center;
 }
 
-.leftPic {
+.DAQPic {
   position: relative;
-  background-image: url("../photos/DSC00581.JPG");
+  background-image: url("../photos/DAQPic.png");
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
