@@ -9,7 +9,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  background-color: #070e20;   
+  background-color: #03070f;   
   color: #e5e7eb;              
 }
 
@@ -95,4 +95,16 @@ footer {
   font-size: 0.9rem;
   color: #94a3b8;
   border-top: 1px solid #1e293b;
+}
+
+.hero {
+  height: 60vh; /* takes up part of the screen */
+  background-image: url("../photos/DSC00581.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
