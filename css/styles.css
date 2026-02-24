@@ -57,12 +57,12 @@ p {
   color: #cbd5f5;
 }
 
-a {
-  color: #38bdf8;
+a { 
+  color: inherit; 
 }
 
 a:hover {
-  color: #7dd3fc;
+  color: inherit; 
 }
 
 .button {
