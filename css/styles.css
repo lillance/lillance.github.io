@@ -126,21 +126,24 @@ footer {
   justify-content: center;
 }
 
-.DAQPic {
-  position: relative;
-  width: 50%;
-  height: fit-content;
-  background-image: url("../photos/DAQPic.png");
-  background-color: #131517;
-  background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat;
-  margin: 0 2rem;
-
+.DAQSection {
   display: flex;
-  align-items: right;
-  justify-content: right;
-  margin-right: auto; 
+  width: 100%;
+}
+
+.DAQPic {
+  width: 50%;
+}
+
+.DAQPic img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.DAQContent {
+  width: 50%;
+  padding: 2rem;
 }
 
 .padTech {
