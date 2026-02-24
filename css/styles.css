@@ -10,7 +10,8 @@ body {
                Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   background-color: #17191d;   
-  color: #e5e7eb;              
+  color: #e5e7eb;      
+  position: center;       
 }
 
 .container {
