@@ -159,11 +159,15 @@ footer {
   position: relative;
   background-image: url("../photos/IMG_8094 3.png");
   background-color: #131517;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
+}
+
+.abtme-text {
+  text-align: center;
+  color: #e5e7eb;
 }
