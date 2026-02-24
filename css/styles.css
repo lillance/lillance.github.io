@@ -161,15 +161,15 @@ footer {
 
 .abtme {
   position: relative;
+  width: 100vw;
+
+  aspect-ratio: 4032 / 1648; /* ← adjust to match your photo */
+  
   background-image: url("../photos/IMG_8094 3.png");
-  background-color: #000000;
+  background-color: #000;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
-
-  width: 100%;
-  height: fit-content;
 
   display: flex;
   align-items: center;
