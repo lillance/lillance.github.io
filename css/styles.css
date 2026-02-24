@@ -44,6 +44,8 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: #38bdf8;
+  transition: color 0.2s ease;
 }
 
 h1, h2, h3 {
