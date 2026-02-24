@@ -128,7 +128,7 @@ footer {
 
 .DAQPic {
   position: relative;
-  height: 60vh;
+  height: 40vh;
   background-image: url("../photos/DAQPic.png");
   background-color: #131517;
   background-size: contain;
