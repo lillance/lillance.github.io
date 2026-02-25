@@ -133,10 +133,11 @@ footer {
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
+  background-color: #000;
 
   display: flex;
-  align-items: right;
-  justify-content: right;
+  align-items: 75%;
+  justify-content: 75%;
 }
 
 .DAQSection-content {
