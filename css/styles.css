@@ -128,7 +128,7 @@ footer {
 
 .DAQSection {
   position: relative;
-  width: 50vh;
+  height: 50vh;
   aspect-ratio: 1450 / 1362;
 
   background-image: url("../photos/DAQPic.png");
