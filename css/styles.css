@@ -146,12 +146,11 @@ footer {
 
 .DAQSection-text {
   position: absolute;
-  right: 5%;
-  top: 50%;
+  right: 50%;
   transform: translateY(-50%);
   z-index: 2;
 
-  text-align: right;
+  text-align: left;
   color: #e5e7eb;
   outline: 2px solid cyan;
 }
