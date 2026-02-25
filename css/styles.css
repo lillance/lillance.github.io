@@ -116,9 +116,10 @@ footer {
 .hero {
   position: relative;
   height: 60vh;
-  background-image: url("../photos/DSC00581.JPG");
+  width: 100vw;
+  background-image: url("../photos/DSC00647.JPG");
   background-size: contain;
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
 
   display: flex;
