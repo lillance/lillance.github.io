@@ -197,3 +197,9 @@ footer {
   text-align: center;
   color: #e5e7eb;
 }
+
+.section-text1 {
+  text-align: left;
+  margin-left: 10%;
+  color: #e5e7eb;
+}
