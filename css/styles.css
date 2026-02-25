@@ -130,8 +130,6 @@ footer {
   position: relative;
   height: 60vh;
   background-color: #000;
-  outline: 2px solid red;
-
 }
 
 .DAQSection-Pic {
@@ -152,7 +150,6 @@ footer {
 
   text-align: left;
   color: #e5e7eb;
-  outline: 2px solid cyan;
 }
 
 
