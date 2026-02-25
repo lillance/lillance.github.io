@@ -154,8 +154,8 @@ footer {
 .DAQSection-text {
   position: absolute;
 
-  left: calc(50% + 12.5vw); /* image edge + 1/8 screen gap */
-  top: 50%;
+  left: 25%; 
+  top: 10%;
   transform: translateY(-50%);
 
   max-width: 35%;
@@ -185,7 +185,7 @@ footer {
 .padTechSection-text {
   position: absolute;
   right: 50%;
-  top: 20%;
+  top: 25%;
   transform: translateY(-50%);
   z-index: 2;
 
