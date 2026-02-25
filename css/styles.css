@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 h1, h2, h3 {
-  text-align: center;
+  text-align: inherit;
   margin-bottom: 0.5rem;
 }
 
