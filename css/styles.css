@@ -138,6 +138,7 @@ footer {
   position: relative;
   height: 40vh;
   background-color: #000;
+  z-index: 0;
 }
 
 .DAQSection-Pic {
@@ -162,20 +163,32 @@ footer {
 }
 
 
-.padTech {
+.padTechSection {
   position: relative;
-  width: 50vw;
-  height: fit-content;
-  background-image: url("../photos/DSC00581.JPG");
-  background-color: #131517;
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  margin: 0 2rem;
+  height: 40vh;
+  background-color: #000;
+  z-index: 0;
+}
 
-  display: flex;
-  align-items: left;
-  justify-content: left;
+.padTechSection-Pic {
+  position: absolute;
+  inset: 0;
+  background-image: url("../photos/DSC00581.JPG");
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.padTechSection-text {
+  position: absolute;
+  right: 50%;
+  top: 20%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  text-align: left;
+  color: #e5e7eb;
 }
 
 .abtme {
