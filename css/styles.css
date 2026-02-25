@@ -127,14 +127,18 @@ footer {
 }
 
 .DAQSection {
-  position: left;
-  display: flex;
+  position: relative;
   width: 50vw;
-  background-image: url("../photos/DAQPic.png");
   aspect-ratio: 1450 / 1362;
 
+  background-image: url("../photos/DAQPic.png");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+
   display: flex;
-  align-items: right;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .DAQSection-text {
