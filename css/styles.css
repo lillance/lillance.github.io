@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 h1, h2, h3 {
-  text-align: inherit;
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
@@ -128,7 +128,7 @@ footer {
 
 .DAQSection {
   position: relative;
-  width: 50vw;
+  width: 50vh;
   aspect-ratio: 1450 / 1362;
 
   background-image: url("../photos/DAQPic.png");
