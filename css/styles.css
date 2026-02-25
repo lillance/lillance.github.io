@@ -154,7 +154,8 @@ footer {
 .DAQSection-text {
   position: absolute;
 
-  left: 25%; 
+  left: 25%;
+  right: 15%;
   top: 25%;
   transform: translateY(-50%);
 
