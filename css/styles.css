@@ -153,13 +153,15 @@ footer {
 
 .DAQSection-text {
   position: absolute;
-  right: 50%;
-  top: 20%;
-  z-index: 2;
 
+  left: calc(50% + 12.5vw); /* image edge + 1/8 screen gap */
+  top: 50%;
+  transform: translateY(-50%);
+
+  max-width: 35%;
   text-align: left;
   color: #e5e7eb;
-  outline: aliceblue;
+  z-index: 2;
 }
 
 
