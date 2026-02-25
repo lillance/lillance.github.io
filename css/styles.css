@@ -133,8 +133,9 @@ footer {
 
   background-image: url("../photos/DAQPic.png");
   background-size: contain;
-  background-position: left center;
+  background-position: left;
   background-repeat: no-repeat;
+  background-color: #000;
 
   display: flex;
   align-items: center;
