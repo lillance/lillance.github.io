@@ -129,21 +129,23 @@ footer {
 .DAQSection {
   position: relative;
   height: 60vh;
-  background-image: url("../photos/DAQPic.png");
-  background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat;
   background-color: #000;
-
-  display: flex;
-  align-items: 75%;
-  justify-content: 75%;
 }
 
-.DAQSection-content {
-  position: relative;
+.DAQSection-Pic {
+  position: absolute;
+  inset: 0;
+  background-image: url("../photos/DAQPic.png");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
   z-index: 1;
-  text-align: center;
+}
+
+.DAQSection-text {
+  position: absolute;
+  z-index: 2;
+  text-align: right center;
 }
 
 
