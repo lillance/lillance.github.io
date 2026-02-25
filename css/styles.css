@@ -128,18 +128,15 @@ footer {
 
 .DAQSection {
   position: relative;
-  height: 50vh;
-  aspect-ratio: 1450 / 1362;
-
+  height: 60vh;
   background-image: url("../photos/DAQPic.png");
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
-  background-color: #000;
 
   display: flex;
-  align-items: right;
-  justify-content: right;
+  align-items: center;
+  justify-content: center;
 }
 
 .DAQSection-text {
