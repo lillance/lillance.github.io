@@ -1,17 +1,18 @@
-
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Base */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  background-color: #131517;   
-  color: #e5e7eb;      
-  position: center;       
+  background-color: #131517;
+  color: #e5e7eb;
+  /* position: center;  <-- remove (invalid) */
 }
 
 .container {
@@ -24,6 +25,7 @@ main {
   margin-top: 2rem;
 }
 
+/* Header / Nav */
 header {
   display: flex;
   justify-content: flex-end;
@@ -49,6 +51,7 @@ nav a:hover {
   color: #17475b;
 }
 
+/* Typography */
 h1, h2, h3 {
   text-align: center;
   margin-bottom: 0.5rem;
@@ -56,17 +59,10 @@ h1, h2, h3 {
 
 p {
   margin-bottom: 1rem;
-  color: #cbd5f5;
+  color: #cbd5f5; /* default paragraph color */
 }
 
-a { 
-  color: inherit; 
-}
-
-a:hover {
-  color: inherit; 
-}
-
+/* Buttons / cards / footer */
 .button {
   display: inline-block;
   padding: 0.5rem 0.9rem;
@@ -98,37 +94,17 @@ footer {
   border-top: 1px solid #1e293b;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-
-.hero {
-  position: relative;
-  height: 60vh;
-  background-image: url("../photos/DSC00581.JPG");
-  background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* ===== DAQ Section (matches your HTML) ===== */
 
 .DAQSection {
   position: relative;
-  width: 50vw;
+
+  /* If you want it full width, use 100% (or 100vw if outside a container) */
+  width: 100%;
+  max-width: 900px;     /* remove this line if you want truly full screen */
+  margin: 1rem auto;
+
+  /* Gives the box a height based on a ratio (since background images can’t auto-size) */
   aspect-ratio: 1450 / 1362;
 
   background-image: url("../photos/DAQPic.png");
@@ -138,52 +114,20 @@ footer {
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* centers your text block */
 }
 
 .DAQSection-text {
-  text-align:center;
+  /* Make it readable on top of the image */
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+
+  text-align: center;
   color: #e5e7eb;
 }
 
-
-.padTech {
-  position: relative;
-  width: 50vw;
-  height: fit-content;
-  background-image: url("../photos/DSC00581.JPG");
-  background-color: #131517;
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  margin: 0 2rem;
-
-  display: flex;
-  align-items: left;
-  justify-content: left;
-}
-
-.abtme {
-  position: relative;
-  width: 100vw;
-
-  aspect-ratio: 4032 / 1648; /* ← adjust to match your photo */
-  
-  background-image: url("../photos/IMG_8094 3.png");
-  background-color: #000;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-top: 1px solid #1e293b;
-  border-bottom: 1px solid #1e293b;
-}
-
-.abtme-text {
-  text-align: center;
+/* Ensure paragraphs inside DAQ text aren't overridden by global p color */
+.DAQSection-text p {
   color: #e5e7eb;
 }
