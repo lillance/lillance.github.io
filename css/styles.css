@@ -55,7 +55,7 @@ nav a:hover {
 }
 
 h1, h2, h3 {
-  text-align: center;
+  text-align: inherit;
   margin-bottom: 0.5rem;
 }
 
@@ -155,7 +155,7 @@ footer {
   position: absolute;
 
   left: 25%; 
-  top: 10%;
+  top: 25%;
   transform: translateY(-50%);
 
   max-width: 35%;
