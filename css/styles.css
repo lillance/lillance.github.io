@@ -6,12 +6,10 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #131517;   
-  color: #e5e7eb;      
-  position: center;       
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  color: #e5e7eb;
+  position: center;
 }
 
 section {
@@ -121,7 +119,8 @@ footer {
 .hero {
   position: relative;
   width: 100vw;
-  aspect-ratio: 1616 / 1080; /* ← adjust to match your photo */
+  height: 100vh;
+  /*aspect-ratio: 1616 / 1080; /* ← adjust to match your photo */
   
   background-image: url("../photos/DSC00647.JPG");
   background-color: #000;
