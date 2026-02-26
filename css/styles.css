@@ -9,6 +9,7 @@ nav a {
   color: #2f2f3b;
   text-decoration: none;
   transition: color 200ms ease, transform 200ms ease;
+  size: 1px;
 }
 
 nav a:hover {
