@@ -38,18 +38,12 @@ footer {
   letter-spacing: 0.05em;
 }
 
-.homeCover::before {
-  content: "";
-  position: relative;
-  inset: 0;
-}
-
 .homeCover {
   display: flex;
   justify-content: center;
   align-items: center;       
 
-  height: 100vh;             
+  height: 25vh;             
   position: relative;
   overflow: hidden;
 }
