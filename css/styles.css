@@ -1,5 +1,6 @@
 
 nav {
+  position: inherit;
   text-align: right;
   z-index: 5;
 }
@@ -16,29 +17,6 @@ nav a {
 nav a:hover {
   color: #5e5e6a;
   transform: scale(1.05);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-footer {
-  position-anchor: bottom;
-  padding: 2rem 0;
-  background-color: #0f172a;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.footer-inner {
-  width: 100vw;
-  margin: 0 auto;
-  text-align: center;
-  color: #94a3b8;
-
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
 }
 
 .homeCover {
