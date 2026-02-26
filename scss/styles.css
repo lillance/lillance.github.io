@@ -1,16 +1,16 @@
----
----
+
 
 nav {
   position: relative;
   text-align: right;
   margin: auto;
   background-color: transparent;
-  color:adjust-hue($color: #2f2f3b, $degrees: 0);
-  &:hover {
-    color:adjust-hue($color: #5c5c68, $degrees: 0);
-    font-size: 1.1rem;
-  }
+  color: #2f2f3b;
+}
+
+nav:hover {
+  color: #5e5e6a;
+  font-size: 1.1rem;
 }
 
 .homeCover {
