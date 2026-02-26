@@ -4,6 +4,44 @@ body {
   padding: 0;
 }
 
+.navbar {
+  position: absolute;   /* sits over hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 20px 40px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: flex-end; /* move links to right */
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 30px;
+  font-size: 1rem;
+  position: relative;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+
 .homeCover {
   margin: 0;
   padding: 0;
