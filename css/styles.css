@@ -14,6 +14,7 @@ body {
 }
 
 section {
+  color: inherit;
   margin-bottom: 5px;
   margin-top: 5px;
 }
@@ -57,11 +58,12 @@ nav a:hover {
 h1, h2, h3 {
   text-align: center;
   margin-bottom: 0.5rem;
+  color: inherit;
 }
 
 p {
   margin-bottom: 1rem;
-  color: #cbd5f5;
+  color: inherit;
 }
 
 a { 
@@ -115,6 +117,7 @@ footer {
   position: relative;
   z-index: 1;
   text-align: center;
+  color: inherit;
 }
 
 
@@ -163,7 +166,7 @@ footer {
   top: 15%;
 
   text-align: left;
-  color: #e5e7eb;
+  color: inherit;
   z-index: 2;
 }
 
@@ -193,7 +196,7 @@ footer {
   z-index: 2;
 
   text-align: left;
-  color: #e5e7eb;
+  color: inherit;
 }
 
 .abtme {
@@ -218,12 +221,12 @@ footer {
 
 .abtme-text {
   text-align: center;
-  color: #e5e7eb;
+  color: inherit; 
 }
 
 .section-text1 {
   text-align: left;
   margin-left: 10%;
   margin-right: 10%;
-  color: #e5e7eb;
+  color: inherit;
 }
