@@ -26,24 +26,22 @@ nav a:hover {
   justify-content: center;
   align-items: center;       
 
-  height: 35vh;         
+  height: 35vh;
+  background-color: black;         
   position: relative;
   overflow: hidden;
 }
 
 .homeCover-img {
-  position: relative;
-  inset: 0;
   background-image: url("../photos/DSC00647.JPG");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
 }
 
 .homeCover-content {
-  position: relative;  
   z-index: 2;
   text-align: center;
   color: white;
+  z-index: 2;
 }
