@@ -45,30 +45,28 @@ footer {
 }
 
 .homeCover {
+  display: flex;
+  justify-content: center;
+  align-items: center;       
+
+  height: 100vh;             
   position: relative;
-  z-index: 0;
-  border: 2px solid red;
+  overflow: hidden;
 }
 
 .homeCover-img {
   position: absolute;
+  inset: 0;
   background-image: url("../photos/DSC00647.JPG");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1;
-  border: 2px solid red;
-
-
-  width: 100%;
-  height: 25%;
+  z-index: 0;
 }
 
 .homeCover-content {
-  position: absolute;
-  text-align: center;
-  height: 50%;
-  width: 50%;
-  border: 2px solid red;
-
+  position: relative;  
   z-index: 2;
+  text-align: center;
+  color: white;
 }
