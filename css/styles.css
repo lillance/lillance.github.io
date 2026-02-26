@@ -1,232 +1,26 @@
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-  font-weight: 400;
-  color:#cbd5f5;
-  position: center;
-  background-color: #14181f;
-}
-
-section {
-  color: inherit;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-main {
-  margin-top: 2rem;
-}
-
-header {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #14181f;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1rem 1.5rem;
-}
-
-nav a {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.25rem 0.4rem;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: #17475b;
-}
-
-h1, h2, h3 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  color: inherit;
-}
-
-p {
-  margin-bottom: 1rem;
-  color: inherit;
-}
-
-a { 
-  color: inherit; 
-}
-
-a:hover {
-  color: inherit; 
-}
-
-.button {
-  display: inline-block;
-  padding: 0.5rem 0.9rem;
-  background-color: #38bdf8;
-  color: #020617;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.button:hover {
-  background-color: #7dd3fc;
-}
-
-.card {
-  background-color: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-footer {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #94a3b8;
-  border-top: 1px solid #1e293b;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+.homeCover {
+  position: relative;
   z-index: 0;
-}
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: inherit;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
 
+  .homeCover-img {
+    position: absolute;
+    background-image: url("../photos/DSC00647.JPG");
+    width: 100%;
+    height: 25%;
+    z-index: 1;
+  }
 
-.hero {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  /*aspect-ratio: 1616 / 1080; /* ← adjust to match your photo */
-  
-  background-image: url("../photos/DSC00647.JPG");
-  background-color: #000;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-top: 1px solid #a1a3a5;
-  border-bottom: 1px solid #a1a3a5;
-}
-
-.DAQSection {
-  position: relative;
-  height: 40vh;
-  background-color: #000;
-  z-index: 0;
-}
-
-.DAQSection-Pic {
-  position: absolute;
-  inset: 0;
-  background-image: url("../photos/DAQPic.png");
-  background-size: contain;
-  background-position: left center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.DAQSection-text {
-  position: absolute;
-
-  left: 25%;
-  right: 5%;
-  top: 15%;
-
-  text-align: left;
-  color: inherit;
-  z-index: 2;
-}
-
-
-.padTechSection {
-  position: relative;
-  height: 40vh;
-  background-color: #000;
-  z-index: 0;
-}
-
-.padTechSection-Pic {
-  position: absolute;
-  inset: 0;
-  background-image: url("../photos/DSC00581.JPG");
-  background-size: contain;
-  background-position: right center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.padTechSection-text {
-  position: absolute;
-  left: 5%;
-  right: 25%;
-  top: 15%;
-  z-index: 2;
-
-  text-align: left;
-  color: inherit;
-}
-
-.abtme {
-  position: relative;
-  width: 100vw;
-  aspect-ratio: 4032 / 1290; /* ← adjust to match your photo */
-  
-  background-image: url("../photos/IMG_8094 3.png");
-  background-color: #000;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: grayscale(100%);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-top: 1px solid #a1a3a5;
-  border-bottom: 1px solid #a1a3a5;
-}
-
-.abtme-text {
-  text-align: center;
-  color: inherit; 
-}
-
-.section-text1 {
-  text-align: left;
-  margin-left: 10%;
-  margin-right: 10%;
-  color: inherit;
+  .homeCover-content {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    z-index: 2;
+  }
 }
