@@ -25,6 +25,7 @@ nav a:hover {
 .homeCover {
   position: relative;
   z-index: 0;
+  outline: #2f2f3b;
 }
 
 .homeCover-img {
@@ -33,6 +34,8 @@ nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
+  outline: #d08030;
+
 
   width: 100%;
   height: 25%;
@@ -43,5 +46,7 @@ nav a:hover {
   text-align: center;
   height: 50%;
   width: 50%;
+  outline: #2121bd;
+
   z-index: 2;
 }
