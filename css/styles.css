@@ -30,6 +30,7 @@ main {
 header {
   display: flex;
   justify-content: flex-end;
+  background-color: #14181f;
 }
 
 nav {
