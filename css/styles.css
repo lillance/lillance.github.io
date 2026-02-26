@@ -1,6 +1,6 @@
 
 nav {
-  position: inherit;
+  position: absolute;
   text-align: right;
   z-index: 5;
 }
