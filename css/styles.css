@@ -3,6 +3,7 @@ body {
 }
 
 .homeCover {
+  margin: 0;
   position: relative;
   height: 35vh;
 
@@ -14,6 +15,7 @@ body {
 }
 
 .homeCover-img {
+  margin: 0;
   position: absolute;
   inset: 0;
   background-image: url("../photos/DSC00647.JPG");
@@ -24,6 +26,7 @@ body {
 }
 
 .homeCover-content {
+  margin: 0;
   position: relative;
   z-index: 2;
   text-align: center;
