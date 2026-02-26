@@ -3,6 +3,7 @@ nav {
   position: absolute;
   text-align: right;
   z-index: 5;
+  background-color:#1b1b1fc0;
 }
 
 nav a {
