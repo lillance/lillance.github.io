@@ -5,6 +5,8 @@ body {
 }
 
 .navbar {
+  margin: 0;
+  padding: 0;
   position: absolute;   /* sits over hero */
   top: 0;
   left: 0;
@@ -18,6 +20,8 @@ body {
 }
 
 .navbar nav a {
+  margin: 0;
+  padding: 0;
   color: white;
   text-decoration: none;
   font-weight: 500;
