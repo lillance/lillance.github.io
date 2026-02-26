@@ -1,6 +1,7 @@
 
 nav {
   text-align: right;
+  z-index: 5;
 }
 
 nav a {
