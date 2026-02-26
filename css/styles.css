@@ -29,6 +29,7 @@ nav a:hover {
   height: 35vh;         
   position: relative;
   overflow: hidden;
+  margin: 0;
 }
 
 .homeCover-img {
