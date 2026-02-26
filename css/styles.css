@@ -32,7 +32,7 @@ nav a:hover {
 }
 
 .homeCover-img {
-  position: absolute;
+  position: relative;
   inset: 0;
   background-image: url("../photos/DSC00647.JPG");
   background-size: cover;
@@ -42,7 +42,7 @@ nav a:hover {
 }
 
 .homeCover-content {
-  position: center;  
+  position: relative;  
   z-index: 2;
   text-align: center;
   color: white;
