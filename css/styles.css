@@ -8,8 +8,9 @@
 body {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   font-weight: 400;
-  color: #14181f;
+  color:#cbd5f5;
   position: center;
+  background-color: #14181f;
 }
 
 section {
