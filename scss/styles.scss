@@ -9,7 +9,7 @@ nav {
   color:adjust-hue($color: #2f2f3b, $degrees: 0);
   &:hover {
     color:adjust-hue($color: #5c5c68, $degrees: 0);
-    text-size-adjust: 110px;
+    font-size: 1.1rem;
   }
 }
 
@@ -26,9 +26,12 @@ nav {
   .homeCover-img {
     position: absolute;
     background-image: url("../photos/DSC00647.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+
     width: 100%;
     height: 25%;
-    z-index: 1;
   }
 
   .homeCover-content {
