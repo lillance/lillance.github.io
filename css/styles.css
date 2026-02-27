@@ -1,4 +1,3 @@
-
 .homeCover {
   position: relative;
   height: 35vh;
@@ -11,10 +10,11 @@
 }
 
 .homeCover-img {
-  position: relative;
+  position: absolute;
   inset: 0;
   background-image: url("../photos/DSC00647.JPG");
   background-size: cover;
+  background-position: center 60%;
   background-repeat: no-repeat;
   z-index: 0;
 }
