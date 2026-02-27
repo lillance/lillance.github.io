@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
 
-  position: absolute;
+  position: relative;
   inset: 0;
   background-image: url("../photos/DSC00647.JPG");
   background-size: cover;
