@@ -2,47 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lancelot Juarez Portfolio</title>
+  <title>Lancelot Juarez — Mechanical Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../about/index.html">About</a>
-        <a href="../projects/index.html">Projects</a>
-        <a href="../contact/index.html">Contact</a>
-    </nav>
-    <section class="homeCover">
-        <div class="homeCover-img"></div>
-        <div class="homeCover-content">
-            <h1>Lancelot Juarez</h1>
-            <h2>Mechanical Engineering</h2>
-            <h3>Specialization in Controls and Robotics</h3>
-        </div>
-    </section>
 
-    <section class="summary">
-        <h3>Summary</h3>
-        <p>Hi, thank you for checking out my portfolio.<br>I hope you enjoy!<br>Here is a quick overview about how I approach problem solving.</p>
-    </section>
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html">Lancelot Juarez</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <section class="window">
-  <div class="window-overlay"></div>
-        <div class="window-content">
-            <h2>Projects</h2>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Mechanical Engineering · UC San Diego · SEDS</p>
+    <h1>Lancelot<br><em>Juarez</em></h1>
+    <p class="hero-sub">Specializing in Controls &amp; Robotics. I build systems that work in the real world — from avionics PCBs to rocket engine test stands.</p>
+    <div class="hero-btns">
+      <a href="projects.html" class="btn btn-solid">View Projects</a>
+      <a href="contact.html" class="btn btn-outline">Contact</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="photos/DSC00647.JPG" alt="Lancelot Juarez">
+  </div>
+</section>
 
-    <section class="projectsSection">
-        <div class="projectsSection-p">
-            <div class="project1"><a href="../DAQ/index.html">DAQ</a></div>
-            <div><h3>EX2</h3></div>
-            <div><h3>EX3</h3></div>
-            <div><h3>EX4</h3></div>
-        </div>
-    </section>
+<!-- SPECS BAR -->
+<div class="specs-bar">
+  <div class="spec reveal">
+    <div class="spec-val"><em>ME</em></div>
+    <div class="spec-key">Mechanical Engineering, B.S.</div>
+  </div>
+  <div class="spec reveal d1">
+    <div class="spec-val">UCSD</div>
+    <div class="spec-key">Jacobs School of Engineering</div>
+  </div>
+  <div class="spec reveal d2">
+    <div class="spec-val">SEDS</div>
+    <div class="spec-key">Space Exploration at UC San Diego</div>
+  </div>
+  <div class="spec reveal d3">
+    <div class="spec-val"><em>C&amp;R</em></div>
+    <div class="spec-key">Controls &amp; Robotics Specialization</div>
+  </div>
+</div>
+
+<!-- ABOUT TEASER -->
+<section class="section" id="about">
+  <div class="teaser-grid">
+    <div class="teaser-left reveal">
+      <p class="section-label">About</p>
+      <h2 class="section-title">Who I <em>Am</em></h2>
+      <p class="body-text" style="margin-top:1.2rem;">I'm a Mechanical Engineering student at UC San Diego specializing in Controls and Robotics. I work at the intersection of hardware and embedded software — where physical systems and real-time code have to agree with each other.</p>
+      <p class="body-text">My approach: understand the physics first, then close the loop.</p>
+    </div>
+    <div class="teaser-right reveal d1">
+      <img class="about-portrait" src="photos/IMG_9234.JPG" alt="Lancelot Juarez">
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- EXPERIENCE TEASER -->
+<section class="section surface-section" id="experience">
+  <p class="section-label reveal">Experience</p>
+  <h2 class="section-title reveal d1">Where I've <em>Worked</em></h2>
+
+  <div class="exp-teaser-list">
+    <div class="exp-teaser-item reveal">
+      <div class="exp-teaser-meta">
+        <p class="exp-date">2023 – Present</p>
+        <p class="exp-org">SEDS UCSD</p>
+      </div>
+      <div>
+        <p class="exp-role">Avionics &amp; DAQ Engineer</p>
+        <p class="body-text">Designed custom PCBs and built data acquisition systems for live rocket engine test campaigns.</p>
+      </div>
+    </div>
+    <div class="exp-teaser-item reveal d1">
+      <div class="exp-teaser-meta">
+        <p class="exp-date">2022 – 2023</p>
+        <p class="exp-org">UC San Diego</p>
+      </div>
+      <div>
+        <p class="exp-role">Undergraduate Researcher — Controls Lab</p>
+        <p class="body-text">Implemented state-space controllers and tuned feedback loops, deployed on embedded hardware.</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="experience.html" class="section-link reveal d2">Full experience →</a>
+</section>
+
+<hr>
+
+<!-- PROJECTS TEASER -->
+<section class="section" id="projects">
+  <p class="section-label reveal">Projects</p>
+  <h2 class="section-title reveal d1">Selected <em>Work</em></h2>
+
+  <div class="proj-teaser-grid reveal d2">
+
+    <a href="projects.html" class="proj-teaser-card">
+      <div class="proj-teaser-img">
+        <img src="photos/DAQPic.png" alt="DAQ System">
+      </div>
+      <div class="proj-teaser-body">
+        <p class="proj-num">01</p>
+        <h3 class="proj-name">DAQ System</h3>
+        <p class="body-text">Multi-channel data acquisition for rocket engine test stands.</p>
+      </div>
+    </a>
+
+    <a href="projects.html" class="proj-teaser-card">
+      <div class="proj-teaser-img">
+        <img src="photos/FlightController.png" alt="Flight Controller">
+      </div>
+      <div class="proj-teaser-body">
+        <p class="proj-num">02</p>
+        <h3 class="proj-name">Flight Controller PCB</h3>
+        <p class="body-text">Custom avionics board for high-powered rocketry.</p>
+      </div>
+    </a>
+
+    <a href="projects.html" class="proj-teaser-card">
+      <div class="proj-teaser-img" style="overflow:hidden;">
+        <img src="photos/DSC00581.JPG" alt="Engine Test Stand" style="object-fit:cover; object-position:center; height:100%;">
+      </div>
+      <div class="proj-teaser-body">
+        <p class="proj-num">03</p>
+        <h3 class="proj-name">Engine Test Stand</h3>
+        <p class="body-text">Field instrumentation for liquid-fuel rocket engine testing.</p>
+      </div>
+    </a>
+
+  </div>
+
+  <a href="projects.html" class="section-link reveal d3">All projects →</a>
+</section>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="strip-img">
+    <img src="photos/IMG_8094 3.png" alt="Field testing a rocket engine">
+  </div>
+</div>
+
+<!-- CONTACT TEASER -->
+<section class="section surface-section" id="contact">
+  <div class="contact-teaser reveal">
+    <div>
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Get in <em>Touch</em></h2>
+      <p class="body-text" style="margin-top:1.2rem; max-width:40ch;">Open to internships, research positions, and collaborations in aerospace, robotics, and embedded controls.</p>
+    </div>
+    <div class="contact-teaser-links reveal d1">
+      <a class="c-link" href="https://www.linkedin.com/in/lancelot-juarez-a92342386/" target="_blank">LinkedIn <span>↗</span></a>
+      <a class="c-link" href="mailto:ljuarez@ucsd.edu">ljuarez@ucsd.edu <span>↗</span></a>
+      <a class="c-link" href="contact.html">Send a message <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-text">© 2025 Lancelot Juarez</span>
+  <span class="footer-text">Mechanical Engineering · UC San Diego</span>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
