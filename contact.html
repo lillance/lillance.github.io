@@ -45,25 +45,31 @@
       </div>
     </div>
 
-    <div class="contact-form reveal d1">
-      <div>
-        <label>Name</label>
-        <input type="text" placeholder="Your name">
-      </div>
-      <div>
-        <label>Email</label>
-        <input type="email" placeholder="you@email.com">
-      </div>
-      <div>
-        <label>Subject</label>
-        <input type="text" placeholder="Internship opportunity, collaboration, etc.">
-      </div>
-      <div>
-        <label>Message</label>
-        <textarea placeholder="Tell me about the opportunity..."></textarea>
-      </div>
-      <button class="btn-submit">Send Message</button>
+  <form class="contact-form reveal d1" id="contact-form" action="https://formspree.io/f/xpqbkzzk" method="POST">
+    <div>
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Your name" required>
     </div>
+
+    <div>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="you@email.com" required>
+    </div>
+
+    <div>
+      <label>Subject</label>
+      <input type="text" name="subject" placeholder="Internship opportunity, collaboration, etc." required>
+    </div>
+
+    <div>
+      <label>Message</label>
+      <textarea name="message" placeholder="Tell me about the opportunity..." required></textarea>
+    </div>
+
+    <button class="btn-submit" type="submit">Send Message</button>
+
+    <p id="form-status"></p>
+  </form>
 
   </div>
 </section>
