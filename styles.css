@@ -351,6 +351,55 @@ footer {
 .d2 { transition-delay: 0.16s; }
 .d3 { transition-delay: 0.24s; }
 
+/* ── ABOUT PAGE ──────────────────────────────────────── */
+.about-bio-grid {
+  display: grid; grid-template-columns: 340px 1fr;
+  gap: 5rem; align-items: start;
+}
+.about-bio-img {
+  position: sticky; top: 6rem;
+}
+.about-bio-img img {
+  width: 100%; aspect-ratio: 3/4;
+  object-fit: cover; object-position: center 15%;
+  filter: grayscale(20%) brightness(0.85); display: block;
+}
+.about-bio-text { padding-top: 0.5rem; }
+
+.about-pillars {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); margin-top: 3rem;
+}
+.pillar {
+  background: var(--surface); padding: 2.5rem 2rem;
+  transition: background 0.2s;
+}
+.pillar:hover { background: var(--lift); }
+.pillar-num {
+  font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 1.2rem;
+}
+.pillar-title {
+  font-family: 'DM Serif Display', serif; font-size: 1.25rem;
+  color: var(--ink); margin-bottom: 0.9rem; line-height: 1.2;
+}
+
+.about-interests-grid {
+  display: grid; grid-template-columns: 1fr 320px;
+  gap: 6rem; align-items: start;
+}
+.about-facts { margin-top: 0.5rem; }
+.fact-item {
+  padding: 1.1rem 0; border-bottom: 1px solid var(--rule);
+}
+.fact-item:first-child { border-top: 1px solid var(--rule); }
+.fact-label {
+  font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 0.3rem;
+}
+.fact-val { font-size: 0.9rem; color: var(--ink); line-height: 1.5; }
+
 /* ── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 900px) {
   nav { padding: 1.2rem 1.5rem; }
@@ -376,4 +425,9 @@ footer {
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .page-hero { padding: 7rem 1.5rem 3rem; }
   footer { flex-direction: column; gap: 0.4rem; text-align: center; padding: 1.5rem; }
+  .about-bio-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-bio-img { position: static; }
+  .about-bio-img img { aspect-ratio: 4/3; object-position: center 20%; }
+  .about-pillars { grid-template-columns: 1fr; }
+  .about-interests-grid { grid-template-columns: 1fr; gap: 3rem; }
 }
