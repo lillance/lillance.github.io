@@ -29,78 +29,105 @@
 </div>
 
 <section class="section">
-  <div class="projects-grid reveal">
+  <div class="pj-grid">
 
-    <div class="proj-card wide">
-      <div class="proj-img">
-        <img src="photos/DAQPic.png" alt="DAQ System">
+    <!-- ── CARD: copy this block to add a new project ── -->
+    <div class="pj-card reveal">
+      <div class="pj-img">
+        <img src="photos/DAQPic.png" alt="DAQ System" style="object-fit:contain;">
       </div>
-      <div class="proj-body">
-        <p class="proj-num">01 — Data Acquisition</p>
-        <h3 class="proj-name">DAQ System</h3>
-        <p class="proj-desc">Custom data acquisition system for rocket engine test stands. Multi-channel sensor fusion with real-time telemetry and high-speed logging. Designed from schematic to fabricated board and deployed in field testing conditions in the Mojave Desert.</p>
-        <p class="proj-desc" style="margin-top:0.8rem;">Responsibilities included sensor selection, signal conditioning circuit design, PCB layout in KiCad, embedded firmware in C, and live data visualization during test fires.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">KiCad</span>
-          <span class="proj-tag">Embedded C</span>
-          <span class="proj-tag">Telemetry</span>
-          <span class="proj-tag">SEDS UCSD</span>
-          <span class="proj-tag">STM32</span>
+      <div class="pj-body">
+        <div class="pj-meta">
+          <span class="pj-num">01</span>
+          <span class="pj-category">Data Acquisition</span>
+        </div>
+        <h3 class="pj-title">DAQ System</h3>
+        <p class="pj-desc">Custom data acquisition system for rocket engine test stands. Multi-channel sensor fusion with real-time telemetry and high-speed logging. Designed from schematic to fabricated board and deployed in field testing conditions in the Mojave Desert.</p>
+        <p class="pj-desc">Responsibilities included sensor selection, signal conditioning circuit design, PCB layout in KiCad, embedded firmware in C, and live data visualization during test fires.</p>
+        <div class="pj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">KiCad</span>
+            <span class="proj-tag">Embedded C</span>
+            <span class="proj-tag">Telemetry</span>
+            <span class="proj-tag">STM32</span>
+            <span class="proj-tag">SEDS UCSD</span>
+          </div>
+          <!-- Optional: <a class="pj-link" href="#" target="_blank">View project ↗</a> -->
+        </div>
+      </div>
+    </div>
+    <!-- ── END CARD ── -->
+
+    <div class="pj-card reveal d1">
+      <div class="pj-img">
+        <img src="photos/FlightController.png" alt="Flight Controller PCB" style="object-fit:contain;">
+      </div>
+      <div class="pj-body">
+        <div class="pj-meta">
+          <span class="pj-num">02</span>
+          <span class="pj-category">Avionics</span>
+        </div>
+        <h3 class="pj-title">Flight Controller PCB</h3>
+        <p class="pj-desc">Custom avionics board for high-powered rocketry. Features motor drivers, dual telemetry modules, battery management, and an STM32 microcontroller in a compact, flight-ready layout. Capable of activating 8 high-voltage channels with built-in inertial measurement units.</p>
+        <p class="pj-desc">Responsibilities included sensor selection, noise reduction circuit design, PCB layout in KiCad, and embedded firmware in C++.</p>
+        <div class="pj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">KiCad</span>
+            <span class="proj-tag">STM32</span>
+            <span class="proj-tag">C++</span>
+            <span class="proj-tag">PCB Layout</span>
+            <span class="proj-tag">SEDS UCSD</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="proj-card">
-      <div class="proj-img">
-        <img src="photos/IMG_6597.jpeg" alt="Deadalus Rocket">
+    <div class="pj-card reveal">
+      <div class="pj-img" style="overflow:hidden;">
+        <img src="photos/DSC00581.JPG" alt="Engine Test Stand" style="object-fit:contain;">
       </div>
-      <div class="proj-body">
-        <p class="proj-num">02 — Rocketry</p>
-        <h3 class="proj-name">Deadalus Rocket</h3>
-        <p class="proj-desc">Custom avionics board for a G-class rocket, featuring onboard audio beacons for recovery, altimeters, and inertial measurement units.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">KiCad</span>
-          <span class="proj-tag">Arduino</span>
-          <span class="proj-tag">Avionics</span>
-          <span class="proj-tag">PCB Layout</span>
+      <div class="pj-body">
+        <div class="pj-meta">
+          <span class="pj-num">03</span>
+          <span class="pj-category">Propulsion</span>
+        </div>
+        <h3 class="pj-title">Engine Test Stand</h3>
+        <p class="pj-desc">Field instrumentation and operation of a liquid-fuel rocket engine test stand. Responsible for sensor hookup, wiring harnesses, DAQ pipeline, and remote fire control during desert test campaigns. Analyzed thrust curves and combustion stability post-test.</p>
+        <div class="pj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">Propulsion</span>
+            <span class="proj-tag">Instrumentation</span>
+            <span class="proj-tag">Field Testing</span>
+            <span class="proj-tag">Data Analysis</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="proj-card">
-      <div class="proj-img" style="aspect-ratio:16/10; overflow:hidden;">
-        <img src="photos/DSC00581.JPG" alt="Engine Test Stand" style="object-fit:cover; object-position:center; height:100%;">
+    <div class="pj-card reveal d1">
+      <div class="pj-img">
+        <img src="photos/IMG_6597.jpeg" alt="Deadalus Rocket" style="object-fit:contain;">
       </div>
-      <div class="proj-body">
-        <p class="proj-num">03 — Propulsion</p>
-        <h3 class="proj-name">Engine Test Stand</h3>
-        <p class="proj-desc">Field instrumentation and operation of a liquid-fuel rocket engine test stand. Responsible for sensor hookup, wiring harnesses, DAQ pipeline, and remote fire control during desert test campaigns. Analyzed thrust curves and combustion stability post-test.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">Propulsion</span>
-          <span class="proj-tag">Instrumentation</span>
-          <span class="proj-tag">Field Testing</span>
-          <span class="proj-tag">Data Analysis</span>
+      <div class="pj-body">
+        <div class="pj-meta">
+          <span class="pj-num">04</span>
+          <span class="pj-category">Rocketry</span>
+        </div>
+        <h3 class="pj-title">Daedalus Rocket</h3>
+        <p class="pj-desc">Custom avionics board for a G-class rocket, featuring onboard audio beacons for recovery, altimeters, and inertial measurement units. Analyzed airframe stability, structural loads, and simulated flight performance.</p>
+        <div class="pj-footer">
+          <div class="proj-tags">
+            <span class="proj-tag">KiCad</span>
+            <span class="proj-tag">Arduino</span>
+            <span class="proj-tag">Avionics</span>
+            <span class="proj-tag">PCB Layout</span>
+            <span class="proj-tag">RPL UCSD</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="proj-card wide">
-      <div class="proj-img">
-        <img src="photos/FlightController.png" alt="Flight Controller PCB">
-      </div>
-      <div class="proj-body">
-        <p class="proj-num">04 — Avionics</p>
-        <h3 class="proj-name">Flight Controller PCB</h3>
-        <p class="proj-desc">Custom avionics board for high-powered rocketry. Features motor drivers, dual telemetry modules, battery management, and an STM32 microcontroller in a compact, flight-ready layout. Designed for SEDS UCSD's liquid-fuel rocket program. Capable of activating 8 high voltage channels and built in inertial mass units.</p>
-        <p class="proj-desc" style="margin-top:0.8rem;">Responsibilities included sensor selection, noise signal reduction circuit design, PCB layout in KiCad, and embedded firmware in C++.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">KiCad</span>
-          <span class="proj-tag">STM32</span>
-          <span class="proj-tag">Avionics</span>
-          <span class="proj-tag">PCB Layout</span>
-        </div>
-      </div>
-    </div>
+    <!-- ── ADD MORE PROJECTS BELOW — copy one pj-card block ── -->
 
   </div>
 </section>

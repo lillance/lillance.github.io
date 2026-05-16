@@ -431,3 +431,79 @@ footer {
   .about-pillars { grid-template-columns: 1fr; }
   .about-interests-grid { grid-template-columns: 1fr; gap: 3rem; }
 }
+/* ── SCALABLE PROJECT GRID (experience.html) ─────────── */
+/*
+  To add a project: copy one .pj-card block in experience.html.
+  Alternate reveal / reveal d1 on pairs so the stagger looks right.
+*/
+.pj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.pj-card {
+  background: var(--surface);
+  display: flex; flex-direction: column;
+  transition: background 0.2s;
+}
+.pj-card:hover { background: var(--lift); }
+
+.pj-img {
+  width: 100%; aspect-ratio: 16/9;
+  overflow: hidden; background: var(--lift);
+  border-bottom: 1px solid var(--rule);
+}
+.pj-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  filter: grayscale(20%) brightness(0.8);
+  transition: transform 0.5s ease, filter 0.3s;
+  display: block;
+}
+.pj-card:hover .pj-img img {
+  transform: scale(1.04);
+  filter: grayscale(0%) brightness(0.95);
+}
+
+.pj-body {
+  padding: 1.8rem 2rem 2rem;
+  display: flex; flex-direction: column; flex: 1;
+}
+.pj-meta {
+  display: flex; align-items: baseline; gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+.pj-num {
+  font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--faint); font-weight: 400;
+}
+.pj-category {
+  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent-bright);
+}
+.pj-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.45rem; line-height: 1.15;
+  color: var(--ink); margin-bottom: 0.9rem;
+}
+.pj-desc {
+  font-size: 0.875rem; color: var(--mid); line-height: 1.75;
+  margin-bottom: 0.6rem;
+}
+.pj-footer {
+  margin-top: auto; padding-top: 1.2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.6rem;
+}
+.pj-link {
+  font-size: 0.75rem; color: var(--mid); text-decoration: none;
+  border-bottom: 1px solid var(--faint); padding-bottom: 1px;
+  white-space: nowrap; transition: color 0.2s, border-color 0.2s;
+}
+.pj-link:hover { color: var(--accent-bright); border-color: var(--accent-bright); }
+
+@media (max-width: 900px) {
+  .pj-grid { grid-template-columns: 1fr; }
+}
