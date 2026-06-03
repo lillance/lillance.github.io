@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DAQ System — Lancelot Juarez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- FIX 4: path is relative to /projects/ folder, so project-detail.css is in same dir -->
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="../index.html">Lancelot Juarez</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../experience.html" class="active"> Experience</a></li>
+    <li><a href="../resume.html">Resume</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="proj-hero">
+  <div class="proj-hero-bg" style="background-image: url('../photos/DAQPic.png');"></div>
+  <div class="proj-hero-overlay"></div>
+  <div class="proj-hero-content">
+    <a href="../work.html" class="proj-hero-back">← Experience</a>
+    <div class="proj-hero-meta">
+      <span class="proj-hero-num">01</span>
+      <span class="proj-hero-category">Data Acquisition</span>
+    </div>
+    <h1>DAQ<br>System</h1>
+    <div class="proj-hero-tags">
+      <span class="proj-hero-tag">KiCad</span>
+      <span class="proj-hero-tag">Embedded C++</span>
+      <span class="proj-hero-tag">Python</span>
+      <span class="proj-hero-tag">STM32</span>
+      <span class="proj-hero-tag">SEDS UCSD</span>
+    </div>
+  </div>
+</div>
+
+<!-- SPECS STRIP -->
+<div class="proj-specs">
+  <div class="proj-spec">
+    <p class="proj-spec-key">Role</p>
+    <p class="proj-spec-val">Lead PCB Designer &amp; Firmware</p>
+  </div>
+  <div class="proj-spec">
+    <p class="proj-spec-key">Organization</p>
+    <p class="proj-spec-val">SEDS at UC San Diego</p>
+  </div>
+  <div class="proj-spec">
+    <p class="proj-spec-key">Timeline</p>
+    <p class="proj-spec-val">2025 – 2025</p>
+  </div>
+  <div class="proj-spec">
+    <p class="proj-spec-key">Status</p>
+    <p class="proj-spec-val">Retired</p>
+  </div>
+</div>
+
+<!-- CASE STUDY LAYOUT -->
+<div class="case-layout">
+
+  <!-- SIDEBAR -->
+  <div class="case-sidebar-sticky">
+  <aside class="case-sidebar">
+    <p class="case-sidebar-label">Sections</p>
+    <nav class="case-nav">
+      <a href="#overview"  class="case-nav-link">Overview</a>
+      <a href="#problem"   class="case-nav-link">The Problem</a>
+      <a href="#approach"  class="case-nav-link">My Approach</a>
+      <a href="#hardware"  class="case-nav-link">Hardware Design</a>
+      <a href="#firmware"  class="case-nav-link">Firmware</a>
+      <a href="#results"   class="case-nav-link">Results</a>
+      <a href="#lessons"   class="case-nav-link">What I Learned</a>
+    </nav>
+
+    <p class="case-sidebar-label">Tech Stack</p>
+    <div class="case-tech-list">
+      <div class="case-tech-item">KiCad (schematic + layout)</div>
+      <div class="case-tech-item">STM32 microcontroller</div>
+      <div class="case-tech-item">Embedded C</div>
+      <div class="case-tech-item">SPI / I2C / UART</div>
+      <div class="case-tech-item">Sensor signal conditioning</div>
+      <div class="case-tech-item">Real-time telemetry</div>
+      <div class="case-tech-item">Python (post-processing)</div>
+    </div>
+  </aside>
+  </div>
+
+  <!-- CONTENT -->
+  <main class="case-content">
+
+    <div class="case-section" id="overview">
+      <p class="case-section-label">Overview</p>
+      <h2>What Is This?</h2>
+      <p>
+        The DAQ System is a custom-designed data acquisition board built for SEDS UCSD's liquid-fuel rocket engine test stands and rockets. It captures analog sensor data across 8  channels — pressure transducers, thermocouples, load cells — and streams it in real time to a ground station during hot-fire tests.
+      </p>
+      <p>
+        I was responsible for the full hardware design from schematic to fabricated PCB, as well as the embedded firmware that runs on it.
+      </p>
+      <div class="img-block">
+        <img src="../photos/DAQPic.png" alt="DAQ System PCB">
+        <p class="img-caption">Final DAQ board revision — fabricated and populated.</p>
+      </div>
+    </div>
+
+    <div class="case-section" id="problem">
+      <p class="case-section-label">The Problem</p>
+      <h2>Why Did This Need to Exist?</h2>
+      <p>
+        Rocket engine testing generates a massive amount of data in a very short window. A typical hot fire lasts only seconds, but in that window you need accurate readings from pressure transducers, temperature sensors, and load cells — all sampled fast enough to catch transient events like combustion instability or pressure spikes.
+      </p>
+      <p>
+        Off-the-shelf DAQ solutions exist but are expensive, bulky, and not designed for the specific sensor configurations we were running. We needed something <strong>compact, reliable, and tailored to our test stand and rockets</strong> — built to survive a desert environment and integrate directly with our ground station software.
+      </p>
+    </div>
+
+    <div class="case-section" id="approach">
+      <p class="case-section-label">My Approach</p>
+      <h2>How I Tackled It</h2>
+      <p>
+        I was initally assigned a set of parameters such as number of data inputs, sampling rates, power requirments, and compatibility. From there I selected the microcontroller STM32F103 Series and laid out the power architecture.
+      </p>
+      <p>
+        The schematic was done in KiCad. I went through two major revisions before going to fab — the first revision surfaced grounding issues in the analog signal chain that were introducing noise on the pressure readings. The second revision separated the High voltage and Low voltage ground planes and added proper filtering capacitors, which shouldv'e helped with noise.
+      </p>
+      <p>
+        PCB layout was constrained by the physical envelope of the test stand and eventual rocket enclosure, so board size mattered. I prioritized keeping the analog signal paths short and away from switching power supply noise.
+      </p>
+    </div>
+
+    <div class="case-section" id="hardware">
+      <p class="case-section-label">Hardware Design</p>
+      <h2>PCB &amp; Electronics</h2>
+      <p>
+        The board is a 4-layer PCB with dedicated power and ground planes. Key subsystems include:
+      </p>
+      <p>
+        <strong>Signal conditioning</strong> — instrumentation amplifiers on each analog input channel to boost and filter sensor signals before the ADC. This was critical for the thermocouple inputs, which produce millivolt-level signals that are highly susceptible to noise.
+      </p>
+      <p>
+        <strong>Power regulation</strong> — the board runs from a 12V battery supply stepped down to 3.3V and 5V rails. I used separate LDO regulators for the analog and digital sections to prevent digital switching noise from coupling into the sensor measurements.
+      </p>
+      <p>
+        <strong>Communication</strong> — data is streamed via UART to a radio module for wireless telemetry to the ground station. There's also a microSD slot for local logging as a redundant backup.
+      </p>
+      <h2>Fist Iteration</h2>
+      <div class="img-grid-2">
+        <img src="../photos/DAQF.png" alt="PCB top view">
+        <img src="../photos/DAQR.png" alt="PCB detail">
+      </div>
+      <h2>Second Iteration</h2>
+      <div class="img-grid-2">
+        <img src="../photos/DAQF2.0.png" alt="PCB top view">
+        <img src="../photos/DAQR2.0.png" alt="PCB detail">
+      </div>
+      <div class="callout">
+        <div class="callout-item">
+          <div class="callout-val"><em>8</em></div>
+          <div class="callout-label">Sensor channels</div>
+        </div>
+        <div class="callout-item">
+          <div class="callout-val"><em>1k</em>Hz</div>
+          <div class="callout-label">Sample rate</div>
+        </div>
+        <div class="callout-item">
+          <div class="callout-val"><em>2</em></div>
+          <div class="callout-label">PCB revisions</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section" id="firmware">
+      <p class="case-section-label">Firmware</p>
+      <h2>Embedded Software</h2>
+      <p>
+        The firmware runs on the STM32 and handles ADC sampling, data packetization, a range of choices of transmission — all running concurrently using FreeTOS.
+      </p>
+      <p>
+        The ADC is triggered by a hardware timer to ensure consistent sample timing regardless of what else the processor is doing. Sampled data can be filtered using a butterworth filter.
+      </p>
+    </div>
+
+    <div class="case-section" id="results">
+      <p class="case-section-label">Results</p>
+      <h2>What Happened</h2>
+      <p>
+        The board was successfully manufactured and tested. It captured steady signals with minmal noise.
+      </p>
+      <p>
+        Post-test analysis using the logged data confirmed the combustion chamber reached target operating pressure and identified a small pressure oscillation during the initial ignition sequence that hadn't been visible in previous less-instrumented tests. That finding directly informed the next iteration of the injector design.
+      </p>
+    </div>
+
+    <div class="case-section" id="lessons">
+      <p class="case-section-label">What I Learned</p>
+      <h2>Takeaways</h2>
+      <p>
+        <strong>Analog layout is unforgiving.</strong> The noise issues in rev 1 came from rushing the layout and not thinking carefully about return current paths. Now I start every mixed-signal board by drawing the ground plane topology before touching any component placement.
+      </p>
+      <p>
+        <strong>Test early and test on the bench.</strong> We built a bench simulation of the test stand sensors before the first field deployment, which caught a firmware timing bug that would have caused dropped samples during the high-pressure phase of the test.
+      </p>
+    </div>
+
+  </main>
+</div>
+
+
+<script>
+  // FIX 5: wider rootMargin so sections trigger reliably
+  const sections = document.querySelectorAll('.case-section');
+  const navLinks = document.querySelectorAll('.case-nav-link');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.case-nav-link[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+/*
+  project-detail.css
+  ─────────────────────────────────────────────────────────
+  Extends styles.css for individual project case study pages.
+  Place this file inside your /projects/ folder.
+  Link BOTH in your HTML (paths relative to /projects/):
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+  ─────────────────────────────────────────────────────────
+*/
+
+/* ── PROJECT HERO ────────────────────────────────────── */
+.proj-hero {
+  position: relative;
+  height: 75vh;
+  min-height: 480px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: flex-end;
+}
+.proj-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(20%) brightness(0.55);
+  transition: transform 0.8s ease;
+}
+.proj-hero:hover .proj-hero-bg {
+  transform: scale(1.02);
+}
+.proj-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(17,18,16,0.92) 0%, rgba(17,18,16,0.1) 60%, transparent 100%);
+}
+.proj-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 3.5rem 3.5rem;
+  width: 100%;
+}
+.proj-hero-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mid);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+.proj-hero-back:hover { color: var(--ink); }
+.proj-hero-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.proj-hero-num {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.proj-hero-category {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+}
+.proj-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.0;
+  max-width: 16ch;
+}
+.proj-hero-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+.proj-hero-tag {
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--mid);
+  background: rgba(17,18,16,0.5);
+}
+
+/* ── SPECS STRIP ─────────────────────────────────────── */
+.proj-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+.proj-spec {
+  padding: 1.6rem 2rem;
+  border-right: 1px solid var(--rule);
+}
+.proj-spec:last-child { border-right: none; }
+.proj-spec-key {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.35rem;
+}
+.proj-spec-val {
+  font-size: 0.9rem;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ── CASE STUDY LAYOUT ───────────────────────────────── */
+.case-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  align-items: start; /* FIX: prevents sidebar from stretching to grid row height */
+}
+
+/* Outer wrapper that does the sticky behaviour */
+.case-sidebar-sticky {
+  position: sticky;
+  top: 80px;                        /* clears the fixed nav */
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  border-right: 1px solid var(--rule);
+}
+.case-sidebar-sticky::-webkit-scrollbar { display: none; }
+
+.case-sidebar {
+  padding: 3rem 2rem 3rem 3.5rem;
+}
+
+/* FIX 2: sidebar labels — use adjacent sibling / direct rule instead of :first-child */
+.case-sidebar-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+/* Remove top margin only from the very first label in the sidebar */
+.case-sidebar > .case-sidebar-label:first-of-type {
+  margin-top: 0;
+}
+
+/* sidebar section nav */
+.case-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.case-nav-link {
+  font-size: 0.82rem;
+  color: var(--mid);
+  text-decoration: none;
+  padding: 0.45rem 0 0.45rem 0.9rem;
+  border-left: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.case-nav-link:hover {
+  color: var(--ink);
+  border-color: var(--faint);
+}
+.case-nav-link.active {
+  color: var(--ink);
+  border-color: var(--accent-bright);
+  background: var(--surface);
+}
+
+.case-sidebar-sticky nav.case-nav {
+  display: flex !important;
+  flex-direction: column !important;
+  position: static !important;
+  transform: none !important;
+  width: 100% !important;
+  height: auto !important;
+  background: transparent !important;
+  text-align: left !important;  /* Forces text alignment back to the left */
+  align-items: stretch !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.case-sidebar-sticky .case-nav-link {
+  display: block !important;
+  position: static !important;
+  float: none !important;
+  width: 100% !important;
+  text-align: left !important;  /* Ensures text stays left-aligned */
+  
+  /* Restores your original design spacing */
+  font-size: 0.82rem !important;
+  padding: 0.55rem 0 0.55rem 0.9rem !important; 
+  margin: 0 !important;
+}
+
+/* sidebar tech list */
+.case-tech-list {
+  display: flex;
+  flex-direction: column;
+}
+.case-tech-item {
+  font-size: 0.78rem;
+  color: var(--mid);
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.case-tech-item:first-child { border-top: 1px solid var(--rule); }
+.case-tech-item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  flex-shrink: 0;
+}
+
+/* ── CASE STUDY CONTENT ──────────────────────────────── */
+.case-content {
+  padding: 4rem 3.5rem;
+  min-width: 0; /* prevent grid blowout */
+}
+
+.case-section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 100px; /* FIX: clears nav + some breathing room */
+}
+.case-section:first-child { padding-top: 0; }
+.case-section:last-child { border-bottom: none; padding-bottom: 0; }
+
+.case-section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.7rem;
+}
+.case-section h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  line-height: 1.1;
+  margin-bottom: 1.4rem;
+}
+.case-section p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--mid);
+  max-width: 64ch;
+  margin-bottom: 1.1rem;
+}
+.case-section p:last-child { margin-bottom: 0; }
+.case-section p strong { color: var(--ink); font-weight: 500; }
+
+/* FIX 3: prevent global em color from bleeding into body copy */
+.case-section p em {
+  color: inherit;
+  font-style: italic;
+}
+
+/* ── PULL QUOTE ──────────────────────────────────────── */
+.pull-quote {
+  margin: 2rem 0;
+  padding: 1.4rem 1.8rem;
+  border-left: 2px solid var(--accent-bright);
+  background: var(--surface);
+}
+.pull-quote p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  color: var(--ink) !important;
+  font-style: italic;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* ── IMAGE BLOCK ─────────────────────────────────────── */
+.img-block { margin: 2.5rem 0; }
+.img-block img {
+  width: 100%;
+  display: block;
+  filter: grayscale(15%) brightness(0.85);
+  border: 1px solid var(--rule);
+  transition: filter 0.3s;
+}
+.img-block:hover img { filter: grayscale(0%) brightness(0.95); }
+.img-caption {
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+  font-style: italic;
+}
+
+/* ── Smaller IMAGE BLOCK ─────────────────────────────── */ 
+.img-block2 { margin: 2.5rem 0; }
+.img-block2 img {
+  width: 50%;
+  display: block;
+  filter: grayscale(15%) brightness(0.85);
+  border: 1px solid var(--rule);
+  transition: filter 0.3s;
+}
+.img-block2:hover img { filter: grayscale(0%) brightness(0.95); }
+.img-caption {
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+  font-style: italic;
+}
+
+/* two-up image grid */
+.img-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  margin: 2.5rem 0;
+  border: 1px solid var(--rule);
+}
+.img-grid-2 img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/10;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(15%) brightness(0.8);
+  transition: filter 0.3s;
+}
+.img-grid-2 img:hover { filter: grayscale(0%) brightness(0.95); }
+
+/* ── CALLOUT STATS ───────────────────────────────────── */
+.callout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 2rem 0;
+}
+.callout-item {
+  background: var(--surface);
+  padding: 1.8rem 2rem;
+}
+.callout-val {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+/* Override global em color specifically here — keep it accent */
+.callout-val em {
+  color: var(--accent-bright) !important;
+  font-style: normal;
+}
+.callout-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+/* ── NEXT PROJECT ────────────────────────────────────── */
+.proj-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 3.5rem;
+  border-top: 1px solid var(--rule);
+  background: var(--surface);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.proj-next:hover { background: var(--lift); }
+.proj-next-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.4rem;
+}
+.proj-next-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+.proj-next-arrow {
+  font-size: 1.8rem;
+  color: var(--mid);
+  transition: transform 0.2s, color 0.2s;
+}
+.proj-next:hover .proj-next-arrow {
+  transform: translateX(6px);
+  color: var(--accent-bright);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 900px) {
+  .proj-hero { height: 55vw; min-height: 320px; }
+  .proj-hero-content { padding: 0 1.5rem 2.5rem; }
+  .proj-specs { grid-template-columns: 1fr 1fr; }
+  .proj-spec { border-right: none; border-bottom: 1px solid var(--rule); }
+  .case-layout { grid-template-columns: 1fr; }
+  .case-sidebar-sticky {
+    position: static;
+    height: auto;
+    overflow-y: visible;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .case-sidebar { padding: 2.5rem 1.5rem; }
+  .case-content { padding: 3rem 1.5rem; }
+  .img-grid-2 { grid-template-columns: 1fr; }
+  .callout { grid-template-columns: 1fr 1fr; }
+  .proj-next { padding: 2rem 1.5rem; }
+}

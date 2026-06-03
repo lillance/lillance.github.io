@@ -12,17 +12,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Allow pj-card to be an <a> without breaking layout */
+    a.pj-card {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    a.pj-card:hover .pj-link {
+      color: var(--accent-bright);
+      border-color: var(--accent-bright);
+    }
+  </style>
 </head>
 <body>
 
 <nav id="nav">
-  <a class="nav-logo" href="index.html">Lancelot Juarez</a>
+  <a class="nav-logo" href="../index.html">Lancelot Juarez</a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="experience.html" class="active">Experience</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../experience.html" class = "active"> Experience</a></li>
+    <li><a href="../resume.html">Resume</a></li>
+    <li><a href="../contact.html">Contact</a></li>
   </ul>
 </nav>
 
@@ -36,7 +49,7 @@
   <div class="pj-grid">
 
     <!-- ── CARD: copy this block to add a new project ── -->
-    <div class="pj-card reveal">
+    <a class="pj-card reveal" href="projects/DAQ.html">
       <div class="pj-img">
         <img src="photos/DAQPic.png" alt="DAQ System" style="object-fit:contain;">
       </div>
@@ -56,10 +69,10 @@
             <span class="proj-tag">STM32</span>
             <span class="proj-tag">SEDS UCSD</span>
           </div>
-          <!-- Optional: <a class="pj-link" href="#" target="_blank">View project ↗</a> -->
+          <span class="pj-link">View case study ↗</span>
         </div>
       </div>
-    </div>
+    </a>
     <!-- ── END CARD ── -->
 
     <div class="pj-card reveal d1">
